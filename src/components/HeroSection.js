@@ -9,42 +9,76 @@ import cyberDog from "../images/final.png";
 import { Link } from "react-router-dom";
 import thumbtack from "../images/thumbtack.png";
 import missing from "../images/missing.png";
+import { useState } from "react";
 
 const HeroSection = () => {
+  const [name, setName] = useState("Cristian");
+  const [location, setLocation] = useState("Bucuresti");
   return (
     <section className={classes["section-hero"]}>
       <div className={classes.hero}>
         <div className={classes["hero-text-box"]}>
           <h1 className={classes["heading-primary"]}>
-            The perfect place for owners to find their lost pet
+            {`Cu ce te putem ajuta astazi${name !== "" ? "," : ""}`}{" "}
+            {name !== "" ? <p className="name-auth"> {name}?</p> : ""}
           </h1>
-          <p className={classes["hero-description"]}>
-            This incentivised 24/7 online service provides you essential
-            assistance for finding your buddy. Peers are one click away from
-            beginning the search
-          </p>
-          <Link to="/auth" className={classes["btn--full"]}>
-            Get Started...
-          </Link>
-
-          <div className={classes["delivered-meals"]}>
-            <div className={classes["delivered-imgs"]}>
-              <img src={customer1} alt="Customer photo" />
-              <img src={customer2} alt="Customer photo" />
-              <img src={customer3} alt="Customer photo" />
-              <img src={customer4} alt="Customer photo" />
-              <img src={customer5} alt="Customer photo" />
-              <img src={customer6} alt="Customer photo" />
-            </div>
-            <p className={classes["delivered-text"]}>
-              <span className={classes["number-text"]}>2.350+</span>
-              customers found their pet
-            </p>
+          <div style={{ color: "white" }}>
+            <svg
+              width="14"
+              height="17"
+              viewBox="0 0 14 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13 7C13 11.6667 7 15.6667 7 15.6667C7 15.6667 1 11.6667 1 7C1 5.4087 1.63214 3.88258 2.75736 2.75736C3.88258 1.63214 5.4087 1 7 1C8.5913 1 10.1174 1.63214 11.2426 2.75736C12.3679 3.88258 13 5.4087 13 7Z"
+                stroke="#A2A0AC"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9Z"
+                stroke="#A2A0AC"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            {location}
           </div>
-        </div>
-        <div className={classes["hero-img-box"]}>
-          <img className={classes["hero-img"]} src={cyberDog} />
-          {/* <img className={classes["missing"]} src={missing} /> */}
+
+          {/* <Link to="/auth" className={classes["btn--full"]}>
+            Get Started...
+          </Link> */}
+
+          <div className={classes["scrolling-wrapper-flexbox"]}>
+            <div className="card">
+              <h2>Card</h2>
+            </div>
+            <div className="card">
+              <h2>Card</h2>
+            </div>
+            <div className="card">
+              <h2>Card</h2>
+            </div>
+            <div className="card">
+              <h2>Card</h2>
+            </div>
+            <div className="card">
+              <h2>Card</h2>
+            </div>
+            <div className="card">
+              <h2>Card</h2>
+            </div>
+            <div className="card">
+              <h2>Card</h2>
+            </div>
+            <div className="card">
+              <h2>Card</h2>
+            </div>
+            <div className="card">
+              <h2>Card</h2>
+            </div>
+          </div>
         </div>
       </div>
     </section>

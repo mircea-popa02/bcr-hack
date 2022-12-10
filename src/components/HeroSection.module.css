@@ -6,6 +6,16 @@
   height: 90vh;
 }
 
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.card {
+  flex: 0 0 auto;
+}
+
 .heading-primary {
   font-size: 4.6rem;
   margin-bottom: 4.6rem;
