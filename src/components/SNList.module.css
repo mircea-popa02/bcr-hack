@@ -12,6 +12,35 @@
   overflow: auto;
   margin-bottom: 2rem;
   position: relative;
+  align-items: center
+}
+
+.search-bar-container {
+  display: flex;
+  width: 90vw;
+  align-items: baseline;
+}
+
+::placeholder {
+  color: #A2A0AC;
+  font-size: 2rem;
+}
+
+.svg-search {
+  width: 2rem;
+  height: 2rem;
+}
+
+.search-bar {
+  background-color: #ffffff;
+  height: 5vh;
+  width: 85vw;
+  border-top: 1vh;
+  border-right: 1vh;
+  border-left: 1vh;
+  border-color: #21416C;
+  font-weight: 200;
+  margin-bottom: 2vh;
 }
 
 .show-hide {
@@ -33,3 +62,17 @@
   cursor: pointer;
   text-decoration: none;
 }
+
+.text-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.text-search h1 {
+  color: #21416C;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+}
+

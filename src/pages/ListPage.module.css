@@ -12,3 +12,12 @@
   align-items: center;
   background-color: white;
 }
+
+.content h1 {
+  color: #21416C;
+  font-size: 3rem;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  margin: 5vw;
+  margin-right: 10vw;
+}

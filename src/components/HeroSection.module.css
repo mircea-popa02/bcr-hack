@@ -59,8 +59,6 @@
   align-items: flex-start
 }
 
-
-
 .btn--news {
   width: 25vw;
   height: 5vh;
@@ -75,7 +73,6 @@
   margin: auto;
   text-align: center;
   display: table;
-  /* margin: 0 auto; */
   margin:auto;
   
 }
