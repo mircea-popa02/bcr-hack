@@ -9,7 +9,7 @@ import hamster from "../images/animals/hamster.jpg";
 import labrador from "../images/animals/labrador.jpg";
 import lizard from "../images/animals/lizard.jpg";
 import pug from "../images/animals/pug.jpg";
-import SpecialSN from "./SpecialSN"
+import SpecialSN from "./SpecialSN";
 
 const DUMMY_PETS = [
   {
@@ -113,15 +113,12 @@ const SNList = (props) => {
     setSearchInput(event.target.value);
   };
 
-
   return (
-
     <div className={classes["sn-list"]}>
       <SpecialSN info={dummyBanks[0]} key={dummyBanks[0].code}></SpecialSN>
       <div className={classes["text-search"]}>
         <h1>Cauta alta locatie in care doresti sa ne vizitezi</h1>
       </div>
-
 
       <div className={classes["search-bar-container"]}>
         <input
@@ -136,14 +133,23 @@ const SNList = (props) => {
           return <p>{name}</p>;
         })} */}
 
-        <svg className={classes["svg-search"]} width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4.71429 0C7.31791 0 9.42857 2.11066 9.42857 4.71429C9.42857 5.86182 9.01856 6.91359 8.33705 7.7311L11.8745 11.2684C12.0418 11.4358 12.0418 11.7071 11.8745 11.8745C11.7257 12.0232 11.4948 12.0398 11.3277 11.9241L11.2684 11.8745L7.7311 8.33705C6.91359 9.01856 5.86182 9.42857 4.71429 9.42857C2.11066 9.42857 0 7.31791 0 4.71429C0 2.11066 2.11066 0 4.71429 0V0ZM4.71429 0.857143C2.58404 0.857143 0.857143 2.58404 0.857143 4.71429C0.857143 6.84453 2.58404 8.57143 4.71429 8.57143C6.84453 8.57143 8.57143 6.84453 8.57143 4.71429C8.57143 2.58404 6.84453 0.857143 4.71429 0.857143Z" fill="#A2A0AC" />
+        <svg
+          className={classes["svg-search"]}
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.71429 0C7.31791 0 9.42857 2.11066 9.42857 4.71429C9.42857 5.86182 9.01856 6.91359 8.33705 7.7311L11.8745 11.2684C12.0418 11.4358 12.0418 11.7071 11.8745 11.8745C11.7257 12.0232 11.4948 12.0398 11.3277 11.9241L11.2684 11.8745L7.7311 8.33705C6.91359 9.01856 5.86182 9.42857 4.71429 9.42857C2.11066 9.42857 0 7.31791 0 4.71429C0 2.11066 2.11066 0 4.71429 0V0ZM4.71429 0.857143C2.58404 0.857143 0.857143 2.58404 0.857143 4.71429C0.857143 6.84453 2.58404 8.57143 4.71429 8.57143C6.84453 8.57143 8.57143 6.84453 8.57143 4.71429C8.57143 2.58404 6.84453 0.857143 4.71429 0.857143Z"
+            fill="#A2A0AC"
+          />
         </svg>
-
       </div>
-      {filteredArray.map((bank) => (
-        <SmallNews info={bank} key={bank.code} />
-      )).splice(0,20)}
+      {filteredArray
+        .map((bank) => <SmallNews info={bank} key={bank.code} />)
+        .splice(0, 20)}
       {/* {props.pets.map((pet) => (
         <SmallNews info={pet} key={pet.id} photo={deliverPhoto(pet.species)} />
       ))} */}
