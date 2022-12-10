@@ -6,7 +6,7 @@ const SmallNews = (props) => {
   // console.log(props.info.id);
 
   const onClickHandler = () => {
-    localStorage.setItem("chosenBank", JSON.stringify(props.bank));
+    localStorage.setItem("chosenBank", JSON.stringify(props.info));
   };
 
   return (
