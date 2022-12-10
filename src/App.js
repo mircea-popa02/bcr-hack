@@ -116,7 +116,28 @@ function App() {
     fetchBanks();
   }, []);
 
-  console.log(banks[0]);
+  // cconsole.log(banks[0]);
+
+  useEffect(() => {
+    // setTimeout(() => {
+    //   navigator.geolocation.getCurrentPosition((position) => {
+    //     console.log("Latitude is :", position.coords.latitude);
+    //     console.log("Longitude is :", position.coords.longitude);
+    //   });
+    // }, 5000);
+    if (navigator.geolocation) {
+      // alert("available!");
+      navigator.geolocation.getCurrentPosition(function (position, error) {
+        console.log(position);
+        console.log(error);
+      });
+      // navigator.geolocation.getCurrentPosition(function (position) {
+      //   alert(position.coords.latitude);
+      // });
+    } else {
+      alert("Sorry Not available!");
+    }
+  }, []);
 
   return (
     <Layout>
