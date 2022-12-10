@@ -52,31 +52,50 @@ const HeroSection = () => {
           <div className={classes["cards-container"]}>
             <div className={classes["scrolling-wrapper-flexbox"]}>
               <div className={classes["card-bcr"]}>
-                <h2>Card</h2>
+                <h2>Depunere sau retragere de bani</h2>
+                <p>
+                  Atentie! Pentru retragerile de numerar de peste 3,000 de euro,
+                  te invitam sa ne contactezi telefonic la *2227 (apeluri
+                  nationale) sau +4021 407 4200 (apeluri internationale).
+                </p>
               </div>
               <div className={classes["card-bcr"]}>
-                <h2>Card</h2>
+                <h2>Plata rata credit</h2>
+                <p>Plata ratelor pentru toate tipurile de credit</p>
               </div>
               <div className={classes["card-bcr"]}>
-                <h2>Card</h2>
+                <h2>Operatiune fara numerar</h2>
+                <p>
+                  Cont curent, card de debit, tranzactii, George si servicii
+                  digitale, administrare cont si card.
+                </p>
               </div>
               <div className={classes["card-bcr"]}>
-                <h2>Card</h2>
+                <h2>Deschidere cont curent</h2>
+                <p>Deschidere cont curent</p>
               </div>
               <div className={classes["card-bcr"]}>
-                <h2>Card</h2>
+                <h2>Deschidere cont minori</h2>
+                <p>Deschidere cont persoane sub 18 ani.</p>
               </div>
               <div className={classes["card-bcr"]}>
-                <h2>Card</h2>
+                <h2>Credit de nevoi personale</h2>
+                <p>Inclusiv card credit si descoperit de cont.</p>
               </div>
               <div className={classes["card-bcr"]}>
-                <h2>Card</h2>
+                <h2>Investitii - subscriere</h2>
+                <p>
+                  Fonduri mutuale, Capital Plan, Titluri de stat, Obligatiuni
+                  structurate, Aur (lingouri si monede) etc.
+                </p>
               </div>
               <div className={classes["card-bcr"]}>
-                <h2>Card</h2>
+                <h2>Asigurare</h2>
+                <p>Viata, casa, bunuri.</p>
               </div>
               <div className={classes["card-bcr"]}>
-                <h2>Card</h2>
+                <h2>Pensie privata</h2>
+                <p>Pilon 3 de la BCR Pensii.</p>
               </div>
             </div>
           </div>
