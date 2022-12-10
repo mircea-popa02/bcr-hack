@@ -5,7 +5,10 @@ import classes from "./ListPage.module.css";
 const ListPage = (props) => {
   return (
     <div className={classes.content}>
-      <h1>The List Page</h1>
+      <h1>Te asteptam in cea mai apropiata locatie BCR</h1>
+      {/* primul card */}
+      <h1>Cauta alta locatie in care doresti sa ne vizitezi</h1>
+      {/* filtru */}
       <SNList pets={props.pets} setPets={props.setPets} />
     </div>
   );

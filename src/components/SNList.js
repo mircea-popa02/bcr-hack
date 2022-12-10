@@ -56,24 +56,80 @@ const deliverPhoto = (species) => {
   }
 };
 
-const SNList = (props) => {
-  const [showForm, setShowForm] = useState(false);
+const dummyBanks = [
+  {
+    code: "ATM0001",
+    name: "BCR CARAS SEVER",
+    address: "STR.I.L.CARAGIALE NR.10",
+    city: "RESITA",
+    county: "CARAS SEVERIN",
+    euro: "DA",
+    contactless: "NU",
+  },
+  {
+    code: "ATM0002",
+    name: "BCR GORJULUI 2",
+    address: "BD.IULIU MANIU NR.64",
+    city: "BUCURESTI",
+    county: "BUCURESTI S6",
+    euro: "DA",
+    contactless: "NU",
+  },
+];
 
-  const showFormHandler = () => {
-    setShowForm((prev) => !prev);
+const SNList = (props) => {
+  // const [showForm, setShowForm] = useState(false);
+
+  // const showFormHandler = () => {
+  //   setShowForm((prev) => !prev);
+  // };
+  const [searchInput, setSearchInput] = useState("");
+  const [filteredArray, setFilteredArray] = useState([]);
+
+  useEffect(() => {
+    setFilteredArray(
+      dummyBanks.filter(
+        (item) =>
+          item.address.toLowerCase().includes(searchInput.toLowerCase()) ||
+          item.city.toLowerCase().includes(searchInput.toLowerCase()) ||
+          item.county.toLowerCase().includes(searchInput.toLowerCase())
+      )
+    );
+  }, [searchInput]);
+
+  const changeInputHandler = (event) => {
+    setSearchInput(event.target.value);
   };
+
+  console.log(searchInput);
 
   return (
     <div className={classes["sn-list"]}>
-      {props.pets.map((pet) => (
-        <SmallNews info={pet} key={pet.id} photo={deliverPhoto(pet.species)} />
+      <div className={classes.frame}>
+        <input
+          type="text"
+          placeholder="Search..."
+          onChange={changeInputHandler}
+          value={searchInput}
+        />
+
+        {/* {filteredArray.map((name) => {
+          return <p>{name}</p>;
+        })} */}
+      </div>
+
+      {filteredArray.map((bank) => (
+        <SmallNews info={bank} key={bank.code} />
       ))}
+      {/* {props.pets.map((pet) => (
+        <SmallNews info={pet} key={pet.id} photo={deliverPhoto(pet.species)} />
+      ))} */}
 
-      <button onClick={showFormHandler} className={classes["show-hide"]}>
+      {/* <button onClick={showFormHandler} className={classes["show-hide"]}>
         {!showForm ? "Lost your pet? Show form..." : "Hide form"}
-      </button>
+      </button> */}
 
-      {showForm && <BasicForm pets={props.pets} onPetChange={props.setPets} />}
+      {/* {showForm && <BasicForm pets={props.pets} onPetChange={props.setPets} />} */}
 
       {/* <SmallNews />
       <SmallNews />
