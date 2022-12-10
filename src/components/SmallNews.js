@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 const SmallNews = (props) => {
   // console.log(props.info.id);
 
+  const onClickHandler = () => {
+    localStorage.setItem("chosenBank", JSON.stringify(props.bank));
+  };
+
   return (
     <div className={classes["news-container"]}>
       <div className={classes.news}>
@@ -35,7 +39,7 @@ const SmallNews = (props) => {
                   stroke-linejoin="round"
                 />
               </svg>
-              {(Math.random()%20000 *100).toFixed(2)}Km
+              {((Math.random() % 20000) * 100).toFixed(2)}Km
             </div>
           </p>
 
@@ -55,15 +59,17 @@ const SmallNews = (props) => {
         </div>
 
         <div className={classes["buttons"]}>
-          <Link to={`/list/${props.info.name}`} className={classes["btn--news"]}>
+          <Link
+            to={`/list/${props.info.name}`}
+            className={classes["btn--news"]}
+          >
             <span>Detalii</span>
           </Link>
 
           <Link to={`/form`} className={classes["btn--news2"]}>
-            <span>Selectează</span>
+            <span onClick={onClickHandler}>Selectează</span>
           </Link>
         </div>
-
       </div>
     </div>
   );
