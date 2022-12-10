@@ -23,6 +23,16 @@
   color: rgba(33, 65, 108, 1);
 }
 
+.distance-bank {
+  display: flex;
+  font-weight: 300;
+  color: rgba(33, 65, 108, 0.2);
+  align-items: center;
+}
+
+.distance-bank svg {
+  margin-right: 2vw;
+}
 
 
 .btn--news {

@@ -1,9 +1,13 @@
 .big-news-container {
+  display: flex;
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   padding: 2rem;
-
   border-radius: 1rem;
-  margin-left: 20rem;
+  /* margin-left: 20rem; */
+  margin: auto;
+  width: 90vw;
+  flex-direction: column;
+
 }
 
 .animalName {
@@ -52,11 +56,6 @@
 }
 
 .big-news-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
   color: #ccc;
   margin-top: 2rem;
   margin-bottom: 4rem;
@@ -64,8 +63,7 @@
 
 .big-news-map {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  width: 80vw;
+  margin: auto;
   margin-bottom: 4rem;
 }
