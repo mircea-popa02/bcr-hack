@@ -2,6 +2,7 @@ import SNList from "../components/SNList";
 import classes from "./ListPage.module.css";
 
 const ListPage = (props) => {
+  console.log(props.banks)
   return (
     <div className={classes.content}>
       <h1>Te așteptăm în cea mai apropiată locație BCR</h1>
