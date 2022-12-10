@@ -19,6 +19,7 @@
   align-items: center;
   height: 8rem;
   width: 1400px;
+  background-color: #E8E7ED;
 }
 
 .righthandside {
@@ -114,6 +115,7 @@ ion-icon:host {
 ion-icon {
   height: 4rem;
   width: 4rem;
+  color: #282828;
 }
 
 .menu-icon {
@@ -151,12 +153,12 @@ ion-icon {
   }
 
   .nav-menu.active {
-    background: #242222;
+    background: #f9f9f9;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
-    color: rgba(228, 228, 228, 0.337);
+    color: rgb(37, 37, 37);
   }
 
   .nav-links {
@@ -180,7 +182,7 @@ ion-icon {
   }
 
   .menu-icon {
-    color: #aaa;
+    color: rgb(241, 241, 241);
     display: block;
     position: absolute;
     top: 0;
@@ -189,8 +191,6 @@ ion-icon {
     font-size: 2.8rem;
     cursor: pointer;
   }
-
-
 
   .fa-times {
     color: #ccc;

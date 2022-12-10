@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap');
 
 body {
   overflow: hidden; /* Hide scrollbars */
