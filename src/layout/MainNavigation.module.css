@@ -30,7 +30,8 @@
 
 .navbar-logo {
   width: 9rem;
-  height: 6rem;
+  /* height: 6rem; */
+
 }
 
 .fa-typo3 {
@@ -51,9 +52,9 @@
   margin-top: 0;
 }
 
-.ionicon {
-  height: 2rem;
-  width: 2rem;
+ion-icon:host {
+  height: 3rem;
+  width: 3rem;
 }
 
 .righthandside a.active {
@@ -110,9 +111,15 @@
   display: none;
 }
 
+ion-icon {
+  height: 4rem;
+  width: 4rem;
+}
+
 .menu-icon {
   /* color: #aaa; */
   display: none;
+  height: 4rem;
 }
 
 @media screen and (max-width: 960px) {
@@ -120,22 +127,19 @@
     position: relative;
   }
 
-  .navbar-logo {
-    width: 7rem;
-    height: 4rem;
-  }
 
   .nav-menu {
     display: flex;
     flex-direction: column;
     gap: 6rem;
-    width: 95.35%;
+    width: 100%;
     /* height: 70vh; */
     position: absolute;
-    top: 80px;
+    top: 10rem;
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
+    
   }
 
   .logout {
@@ -152,13 +156,14 @@
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
+    color: rgba(228, 228, 228, 0.337);
   }
 
   .nav-links {
     text-align: center;
     padding: 2rem;
-    width: 90%;
     display: table;
+    font-size: 3rem;
   }
 
   .nav-links:hover {
@@ -184,6 +189,8 @@
     font-size: 2.8rem;
     cursor: pointer;
   }
+
+
 
   .fa-times {
     color: #ccc;

@@ -25,11 +25,10 @@
 .addr-landing {
   width: 100vw;
   height: 10vh;
-  background-color:  white;
+  background-color: white;
   color: #000;
   font-size: 3rem;
-  font-family: 'Work Sans', sans-serif;
-  
+  font-family: "Work Sans", sans-serif;
 }
 .card-bcr {
   flex: 0 0 auto;
@@ -45,8 +44,8 @@
 .heading-primary {
   font-size: 4.6rem;
   margin-bottom: 4.6rem;
-  background-color: #f3ec78;
-  background-image: linear-gradient(45deg, #ffe998, #57370d);
+  /* background-color: #f3ec78; */
+  /* background-image: linear-gradient(45deg, #ffe998, #57370d); */
   background-size: 100%;
   margin: auto;
   -webkit-background-clip: text;
@@ -54,8 +53,17 @@
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   margin-bottom: 3vh;
-  font-size: 3rem;
-  font-family: 'Work Sans', sans-serif;
+  font-size: 6rem;
+  font-family: "Work Sans", sans-serif;
+  /* font-weight: 200; */
+  padding: 3vw;
+  padding-right: 6vw;
+  font-family: "Work Sans";
+  /* font-style: normal; */
+  font-weight: 100;
+
+  letter-spacing: -0.41px;
+  background-color: #282828;
 }
 
 .number-text {
