@@ -9,11 +9,53 @@ import cyberDog from "../images/final.png";
 import { Link } from "react-router-dom";
 import thumbtack from "../images/thumbtack.png";
 import missing from "../images/missing.png";
-import { useState } from "react";
+import {useEffect, useState} from "react";
+import Geocode from "react-geocode";
 
-const HeroSection = () => {
+const HeroSection = (props) => {
+  // console.log("baaaaaaaaaai");
+  // console.log(props.loc)
   const [name, setName] = useState("Cristian");
   const [location, setLocation] = useState("Bucuresti");
+
+  const [myLoc, setMyLoc] = useState("");
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
+
+  console.log("1");
+
+  const ceva = window.localStorage.getItem("location") || [];
+
+  useEffect(() => {
+    const fetchUserLocation = async () => {
+       
+      Geocode.setApiKey("AIzaSyDtMSRiyaavuMQA_DFwYglfSGCDKSd6zbc");
+      Geocode.setLocationType("ROOFTOP");
+      
+      const response = await Geocode.fromLatLng(x, y);
+      // if(!response){
+      //   alert("smth wrong");
+      // }
+      const responseData = response.results[0].formatted_address;
+      // await setTimer(() => {}, 2000);
+      console.log("hero");
+      setMyLoc(responseData);
+      // console.log(responseData);
+    }
+    navigator.geolocation.getCurrentPosition(function (position, error) {
+      setX(position.coords.latitude);
+      setY(position.coords.longitude)
+      fetchUserLocation();
+        });
+    
+    
+    
+    
+  },[myLoc])
+
+  if(myLoc!=="")
+  window.localStorage.setItem("location", JSON.stringify(myLoc));
+
   return (
     <section className={classes["section-hero"]}>
       <div className={classes.hero}>
@@ -43,7 +85,7 @@ const HeroSection = () => {
                 stroke-linejoin="round"
               />
             </svg>
-            {location}
+            {ceva.substring(1,ceva.length-1)}
           </div>
 
           {/* <Link to="/auth" className={classes["btn--full"]}>

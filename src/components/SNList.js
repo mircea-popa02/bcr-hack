@@ -113,7 +113,6 @@ const SNList = (props) => {
     setSearchInput(event.target.value);
   };
 
-  console.log(searchInput);
 
   return (
 
@@ -142,9 +141,9 @@ const SNList = (props) => {
         </svg>
 
       </div>
-      {dummyBanks.map((bank) => (
+      {filteredArray.map((bank) => (
         <SmallNews info={bank} key={bank.code} />
-      ))}
+      )).splice(0,20)}
       {/* {props.pets.map((pet) => (
         <SmallNews info={pet} key={pet.id} photo={deliverPhoto(pet.species)} />
       ))} */}

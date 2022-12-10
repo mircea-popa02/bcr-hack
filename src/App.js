@@ -9,6 +9,7 @@ import AuthContext from "./store/auth-context";
 import { useContext, useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import { storage } from "./store/firebase";
+
 import {
   ref,
   uploadBytes,
@@ -20,6 +21,7 @@ import FormPage from "./pages/FormPage";
 import Confirmation from "./pages/Confirmation";
 
 function App() {
+  
   const authCtx = useContext(AuthContext);
   const [pets, setPets] = useState([]);
   const [banks, setBanks] = useState([]);
@@ -122,27 +124,30 @@ function App() {
 
   // cconsole.log(banks[0]);
 
-  useEffect(() => {
+  
     // setTimeout(() => {
     //   navigator.geolocation.getCurrentPosition((position) => {
     //     console.log("Latitude is :", position.coords.latitude);
     //     console.log("Longitude is :", position.coords.longitude);
     //   });
     // }, 5000);
-    if (navigator.geolocation) {
-      // alert("available!");
-      navigator.geolocation.getCurrentPosition(function (position, error) {
-        console.log(position);
-        setLat(position.coords.latitude);
-        setLng(position.coords.longitude);
-        console.log(error);
-      });
-      // navigator.geolocation.getCurrentPosition(function (position) {
-      //   alert(position.coords.latitude);
-      // });
-    } else {
-      alert("Sorry Not available!");
-    }
+
+    // Geocode.setApiKey("AIzaSyDtMSRiyaavuMQA_DFwYglfSGCDKSd6zbc");
+    // Geocode.setLocationType("ROOFTOP");
+    // if (navigator.geolocation) {
+    //   // alert("available!");
+    //   navigator.geolocation.getCurrentPosition(function (position, error) {
+    //     console.log(position);
+    //     setLat(position.coords.latitude);
+    //     setLng(position.coords.longitude);
+    //     console.log(error);
+    //   });
+    //   // navigator.geolocation.getCurrentPosition(function (position) {
+    //   //   alert(position.coords.latitude);
+    //   // });
+    // } else {
+    //   alert("Sorry Not available!");
+    // }
 
     // function displayLocation(latitude, longitude) {
     //   var request = new XMLHttpRequest();
@@ -202,7 +207,8 @@ function App() {
     //   errorCallback,
     //   options
     // );
-  }, []);
+
+    
 
   return (
     <Layout>
