@@ -1,4 +1,3 @@
-import SmallNews from "../components/SmallNews";
 import SNList from "../components/SNList";
 import classes from "./ListPage.module.css";
 

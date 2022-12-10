@@ -21,7 +21,7 @@ const SmallNews = (props) => {
           <p>Disponibil incepand cu 15:30 astazi</p>
           <p>self-service 24/7</p>
         </div>
-        <Link to={`/list/${props.info.id}`} className={classes["btn--news"]}>
+        <Link to={`/list/${props.info.name}`} className={classes["btn--news"]}>
           <span>Read more</span>
         </Link>
       </div>
