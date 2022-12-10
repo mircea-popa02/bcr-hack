@@ -58,6 +58,9 @@ const HeroSection = () => {
                   te invitam sa ne contactezi telefonic la *2227 (apeluri
                   nationale) sau +4021 407 4200 (apeluri internationale).
                 </p>
+                <Link to={`/list`} className={classes["btn--news"]}>
+                  <span>Continua</span>
+                </Link>
               </div>
               <div className={classes["card-bcr"]}>
                 <h2>Plata rata credit</h2>
