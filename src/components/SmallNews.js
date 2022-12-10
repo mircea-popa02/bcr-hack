@@ -54,7 +54,7 @@ const SmallNews = (props) => {
           <p>self-service 24/7</p> */}
         </div>
         <Link to={`/list/${props.info.name}`} className={classes["btn--news"]}>
-          <span>Read more</span>
+          <span>Detalii</span>
         </Link>
       </div>
     </div>

@@ -5,7 +5,7 @@
   border-radius: 1rem;
   margin: auto;
   display: flex;
-  background: #ffffff;
+  background: #BEE5FA;
   border: 1px solid rgba(33, 65, 108, 0.2);
   box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
@@ -20,7 +20,20 @@
 }
 
 .specialTextbox {
-  color: rgba(33, 65, 108, 1);
+  color: #21416C;
+}
+
+.special-name {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.address-name-special {
+  margin-top: 1.5vh;
+  color: #5C7999;
 }
 
 .distance-bank {

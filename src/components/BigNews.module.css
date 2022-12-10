@@ -1,13 +1,36 @@
 .big-news-container {
   display: flex;
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-  padding: 2rem;
-  border-radius: 1rem;
-  /* margin-left: 20rem; */
+  background: #ffffff;
+  border: 1px solid rgba(33, 65, 108, 0.2);
+  box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
   margin: auto;
   width: 90vw;
   flex-direction: column;
+  padding: 5vw;
+  align-items: flex-start
+}
 
+.big-news-container svg {
+  height: 3rem;
+  width: 3rem;
+  color: #21416c;
+}
+
+.wrapper {
+  background-color: white;
+  height: 100vh;
+}
+
+.wrapper h1 {
+  color: #21416c;
+  font-weight: 500;
+  padding: 6vw;
+}
+
+.wrapper h2 {
+  color: #21416c;
+  font-weight: 500;
 }
 
 .animalName {
@@ -65,5 +88,5 @@
   display: flex;
   width: 80vw;
   margin: auto;
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
 }

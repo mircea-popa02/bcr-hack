@@ -35,7 +35,7 @@ const DetailsPage = (props) => {
 
   return (
     <div>
-      <h1>The Details Page</h1>
+      
       <BigNews bank={bank[0]} />
     </div>
   );

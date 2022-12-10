@@ -26,7 +26,7 @@ const SmallNews = (props) => {
           </p>
         </div>
         <Link to={`/list/${props.info.name}`} className={classes["btn--news"]}>
-          <span>Read more</span>
+          <span>Detalii</span>
         </Link>
       </div>
     </div>
