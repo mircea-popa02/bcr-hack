@@ -1,0 +1,30 @@
+.trustedby {
+  padding: 4.8rem 0 6.4rem 0;
+  width: 100vw;
+  background-color: #ccc;
+}
+
+.trustedby-title {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 3.2rem;
+  background-color: #f3ec78;
+  background-image: linear-gradient(45deg, #ffe998, #57370d);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.trustedby-logos {
+  /* margin-left: 30rem; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.trustedby-logos img {
+  height: 3.2rem;
+  filter: brightness(0);
+  /* opacity: 100%; */
+}

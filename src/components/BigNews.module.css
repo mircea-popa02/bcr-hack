@@ -1,0 +1,71 @@
+.big-news-container {
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  padding: 2rem;
+
+  border-radius: 1rem;
+  margin-left: 20rem;
+}
+
+.animalName {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.big-image {
+  border: 6px solid #ccc;
+  width: 25rem;
+  height: 25rem;
+}
+
+.big-news-header {
+  color: #ccc;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-gap: 2rem; */
+  align-items: center;
+}
+
+.firstgroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  /* flex-direction: column; */
+}
+
+.reward {
+  margin-left: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* font-size: 1.7rem; */
+  /* margin-bottom: 4.6rem; */
+  background-color: #f3ec78;
+  background-image: linear-gradient(45deg, #ffe998, #57370d);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.big-news-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  color: #ccc;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.big-news-map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}

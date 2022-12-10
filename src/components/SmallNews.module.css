@@ -1,0 +1,50 @@
+.news-container {
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  padding: 2rem;
+
+  border-radius: 1rem;
+  margin-left: 20rem;
+}
+
+.news {
+  width: 60rem;
+  /* height: 16rem; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  align-items: center;
+  /* margin: 2rem 0; */
+  /* align-items: center; */
+}
+
+.doggo {
+  width: 10rem;
+  height: 10rem;
+  /* border-radius: 50%; */
+  /* object-fit: cover; */
+  border: 0.2rem solid #ccc;
+}
+
+.textbox {
+  color: #ccc;
+}
+
+.btn--news {
+  background-color: #f3ec78;
+  background-image: linear-gradient(45deg, #ffe998, #57370d);
+  color: #000;
+  height: 4rem;
+  border-radius: 0.2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
