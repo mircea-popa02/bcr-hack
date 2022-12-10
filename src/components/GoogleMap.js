@@ -7,16 +7,18 @@ const containerStyle = {
   height: "400px",
 };
 
-const center2 = {
-  lat: -3.756,
-  lng: -44.534,
-};
 
 const MyMap = (props) => {
+  console.log(props)
   const center = {
-    lat: 45.26667,
-    lng: 27.95333,
+    lat: 0,
+    lng: 0,
   };
+
+  center.lat = props.latitude;
+  center.lng = props.longitude;
+
+  console.log(center)
 
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",

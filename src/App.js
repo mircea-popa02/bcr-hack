@@ -208,6 +208,8 @@ function App() {
     //   options
     // );
 
+    // console.log(banks.length)
+
     
 
   return (
