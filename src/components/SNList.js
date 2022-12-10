@@ -9,6 +9,7 @@ import hamster from "../images/animals/hamster.jpg";
 import labrador from "../images/animals/labrador.jpg";
 import lizard from "../images/animals/lizard.jpg";
 import pug from "../images/animals/pug.jpg";
+import SpecialSN from "./SpecialSN"
 
 const DUMMY_PETS = [
   {
@@ -129,7 +130,8 @@ const SNList = (props) => {
         })} */}
       </div>
 
-      {filteredArray.map((bank) => (
+        <SpecialSN info={dummyBanks[0]} key={dummyBanks[0].code}></SpecialSN>
+      {dummyBanks.map((bank) => (
         <SmallNews info={bank} key={bank.code} />
       ))}
       {/* {props.pets.map((pet) => (

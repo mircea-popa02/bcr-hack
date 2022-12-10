@@ -1,9 +1,10 @@
 .news-container {
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   padding: 2rem;
-
+  width: 80vw;
   border-radius: 1rem;
-  margin-left: 20rem;
+  margin: auto;
+  display: flex;
 }
 
 .news {

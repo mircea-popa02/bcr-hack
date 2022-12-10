@@ -59,14 +59,14 @@ const HeroSection = () => {
                   nationale) sau +4021 407 4200 (apeluri internationale).
                 </p>
                 <Link to={`/list`} className={classes["btn--news"]}>
-                  <span>Continua</span>
+                  <div>Continua</div>
                 </Link>
               </div>
               <div className={classes["card-bcr"]}>
                 <h2>Plata rata credit</h2>
                 <p>Plata ratelor pentru toate tipurile de credit</p>
                 <Link to={`/list`} className={classes["btn--news"]}>
-                  <span>Continua</span>
+                  <div>Continua</div>
                 </Link>
               </div>
               <div className={classes["card-bcr"]}>
@@ -76,14 +76,14 @@ const HeroSection = () => {
                   digitale, administrare cont si card.
                 </p>
                 <Link to={`/list`} className={classes["btn--news"]}>
-                  <span>Continua</span>
+                  <div>Continua</div>
                 </Link>
               </div>
               <div className={classes["card-bcr"]}>
                 <h2>Deschidere cont curent</h2>
                 <p>Deschidere cont curent</p>
                 <Link to={`/list`} className={classes["btn--news"]}>
-                  <span>Continua</span>
+                  <div>Continua</div>
                 </Link>
               </div>
               <div className={classes["card-bcr"]}>
@@ -94,7 +94,7 @@ const HeroSection = () => {
                 <h2>Credit de nevoi personale</h2>
                 <p>Inclusiv card credit si descoperit de cont.</p>
                 <Link to={`/list`} className={classes["btn--news"]}>
-                  <span>Continua</span>
+                  <div>Continua</div>
                 </Link>
               </div>
               <div className={classes["card-bcr"]}>
@@ -104,24 +104,28 @@ const HeroSection = () => {
                   structurate, Aur (lingouri si monede) etc.
                 </p>
                 <Link to={`/list`} className={classes["btn--news"]}>
-                  <span>Continua</span>
+                  <div>Continua</div>
                 </Link>
               </div>
               <div className={classes["card-bcr"]}>
                 <h2>Asigurare</h2>
                 <p>Viata, casa, bunuri.</p>
                 <Link to={`/list`} className={classes["btn--news"]}>
-                  <span>Continua</span>
+                  <div>Continua</div>
                 </Link>
               </div>
               <div className={classes["card-bcr"]}>
                 <h2>Pensie privata</h2>
                 <p>Pilon 3 de la BCR Pensii.</p>
                 <Link to={`/list`} className={classes["btn--news"]}>
-                  <span>Continua</span>
+                  <div>Continua</div>
                 </Link>
               </div>
             </div>
+          </div>
+
+          <div className={classes["footer"]}>
+            footer
           </div>
         </div>
       </div>
