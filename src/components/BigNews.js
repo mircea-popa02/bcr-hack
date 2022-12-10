@@ -10,6 +10,7 @@ import lizard from "../images/animals/lizard.jpg";
 import pug from "../images/animals/pug.jpg";
 import { useEffect, useState } from "react";
 import Geocode from "react-geocode";
+import { Link } from "react-router-dom";
 
 const deliverPhoto = (species) => {
   switch (species) {
@@ -117,6 +118,9 @@ const BigNews = (props) => {
         <div className={classes["big-news-map"]}>
           {lat !== 0 ? <MyMap latitude={lat} longitude={lng} /> : null}
         </div>
+        <Link to={`/form`} className={classes["btn--news2"]}>
+            <span>Selectează</span>
+          </Link>
       </div>
 
     </div>

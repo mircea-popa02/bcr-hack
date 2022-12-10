@@ -90,3 +90,21 @@
   margin: auto;
   /* margin-bottom: 4rem; */
 }
+
+.btn--news2 {
+  background: #21416C;;
+  border-radius: 1rem;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 1.5rem;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}

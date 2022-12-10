@@ -44,6 +44,59 @@
   /* flex-wrap: wrap; */
 }
 
+#plant-left {
+  animation: plants 1.5s ease alternate infinite;
+}
+
+#plant-right {
+  animation: plants 1.5s ease alternate infinite 0.5s;
+}
+
+.svgeu {
+  width: 80%;
+}
+
+#me {
+  animation: me 1s ease alternate infinite;
+  transform-origin: bottom;
+}
+
+@keyframes me {
+  from {
+    transform: rotateZ(-5deg);
+  }
+
+  to {
+    transform: rotateZ(5deg);
+  }
+}
+
+@keyframes plants {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-30%);
+  }
+}
+
+#clock-arrow {
+  animation: clock 1.5s infinite linear;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+@keyframes clock {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
 .control-group .form-control {
   min-width: 15rem;
   flex: 1;

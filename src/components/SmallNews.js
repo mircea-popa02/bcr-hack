@@ -35,7 +35,7 @@ const SmallNews = (props) => {
                   stroke-linejoin="round"
                 />
               </svg>
-              800m
+              {(Math.random()%20000 *100).toFixed(2)}Km
             </div>
           </p>
 
@@ -53,9 +53,17 @@ const SmallNews = (props) => {
           {/* <p>Disponibil incepand cu 15:30 astazi</p>
           <p>self-service 24/7</p> */}
         </div>
-        <Link to={`/list/${props.info.name}`} className={classes["btn--news"]}>
-          <span>Detalii</span>
-        </Link>
+
+        <div className={classes["buttons"]}>
+          <Link to={`/list/${props.info.name}`} className={classes["btn--news"]}>
+            <span>Detalii</span>
+          </Link>
+
+          <Link to={`/form`} className={classes["btn--news2"]}>
+            <span>Selectează</span>
+          </Link>
+        </div>
+
       </div>
     </div>
   );
