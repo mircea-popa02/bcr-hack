@@ -24,7 +24,7 @@ const HeroSection = (props) => {
 
   console.log("1");
 
-  const ceva = window.localStorage.getItem("location") || [];
+  const ceva = window.localStorage.getItem("location") || "uunknown locationn";
 
   useEffect(() => {
     const fetchUserLocation = async () => {
