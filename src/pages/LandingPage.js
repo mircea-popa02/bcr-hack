@@ -5,7 +5,7 @@ const LandingPage = () => {
   return (
     <>
       <HeroSection />
-      <TrustedBySection />
+      {/* <TrustedBySection /> */}
     </>
   );
 };

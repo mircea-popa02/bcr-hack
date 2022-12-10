@@ -1,4 +1,4 @@
-import img from "../paws logo.PNG";
+import img from "../images/bcr.png";
 import { NavLink, Link } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 import { useState } from "react";

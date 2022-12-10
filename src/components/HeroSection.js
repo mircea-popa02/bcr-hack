@@ -22,7 +22,7 @@ const HeroSection = () => {
             {`Cu ce te putem ajuta astazi${name !== "" ? "," : ""}`}{" "}
             {name !== "" ? <p className="name-auth"> {name}?</p> : ""}
           </h1>
-          <div style={{ color: "white" }}>
+          <div className={classes["addr-landing"]}>
             <svg
               width="14"
               height="17"
@@ -49,34 +49,35 @@ const HeroSection = () => {
           {/* <Link to="/auth" className={classes["btn--full"]}>
             Get Started...
           </Link> */}
-
-          <div className={classes["scrolling-wrapper-flexbox"]}>
-            <div className="card">
-              <h2>Card</h2>
-            </div>
-            <div className="card">
-              <h2>Card</h2>
-            </div>
-            <div className="card">
-              <h2>Card</h2>
-            </div>
-            <div className="card">
-              <h2>Card</h2>
-            </div>
-            <div className="card">
-              <h2>Card</h2>
-            </div>
-            <div className="card">
-              <h2>Card</h2>
-            </div>
-            <div className="card">
-              <h2>Card</h2>
-            </div>
-            <div className="card">
-              <h2>Card</h2>
-            </div>
-            <div className="card">
-              <h2>Card</h2>
+          <div className={classes["cards-container"]}>
+            <div className={classes["scrolling-wrapper-flexbox"]}>
+              <div className={classes["card-bcr"]}>
+                <h2>Card</h2>
+              </div>
+              <div className={classes["card-bcr"]}>
+                <h2>Card</h2>
+              </div>
+              <div className={classes["card-bcr"]}>
+                <h2>Card</h2>
+              </div>
+              <div className={classes["card-bcr"]}>
+                <h2>Card</h2>
+              </div>
+              <div className={classes["card-bcr"]}>
+                <h2>Card</h2>
+              </div>
+              <div className={classes["card-bcr"]}>
+                <h2>Card</h2>
+              </div>
+              <div className={classes["card-bcr"]}>
+                <h2>Card</h2>
+              </div>
+              <div className={classes["card-bcr"]}>
+                <h2>Card</h2>
+              </div>
+              <div className={classes["card-bcr"]}>
+                <h2>Card</h2>
+              </div>
             </div>
           </div>
         </div>
