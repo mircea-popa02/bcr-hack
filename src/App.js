@@ -16,6 +16,7 @@ import {
   getDownloadURL,
   getMetadata,
 } from "firebase/storage";
+import FormPage from "./pages/FormPage";
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -212,14 +213,16 @@ function App() {
           <AuthPage />
         </Route>
         <Route path="/list" exact>
-          {authCtx.isLoggedIn && (
-            <ListPage pets={pets} banks={banks} setPets={setPets} />
-          )}
-          {!authCtx.isLoggedIn && <Redirect to="/auth" />}
+          {<ListPage pets={pets} banks={banks} setPets={setPets} />}
+          {/* {!authCtx.isLoggedIn && <Redirect to="/auth" />} */}
+        </Route>
+        <Route path="/form" exact>
+          {<FormPage pets={pets} banks={banks} setPets={setPets} />}
+          {/* {!authCtx.isLoggedIn && <Redirect to="/auth" />} */}
         </Route>
         <Route path="/list/:avatarId">
-          {authCtx.isLoggedIn && <DetailsPage pets={pets} banks={banks} />}
-          {!authCtx.isLoggedIn && <Redirect to="/auth" />}
+          {<DetailsPage pets={pets} banks={banks} />}
+          {/* {!authCtx.isLoggedIn && <Redirect to="/auth" />} */}
         </Route>
         <Route path="*">
           <Redirect to="/" />
