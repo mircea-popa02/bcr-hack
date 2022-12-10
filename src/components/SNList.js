@@ -113,7 +113,6 @@ const SNList = (props) => {
     setSearchInput(event.target.value);
   };
 
-
   return (
     <div className={classes["sn-list"]}>
       <SpecialSN info={dummyBanks[0]} key={dummyBanks[0].code}></SpecialSN>
@@ -148,9 +147,9 @@ const SNList = (props) => {
           />
         </svg>
       </div>
-      {filteredArray.map((bank) => (
-        <SmallNews info={bank} key={bank.code} />
-      )).splice(0,20)}
+      {filteredArray
+        .map((bank) => <SmallNews info={bank} key={bank.code} />)
+        .splice(0, 20)}
       {/* {props.pets.map((pet) => (
         <SmallNews info={pet} key={pet.id} photo={deliverPhoto(pet.species)} />
       ))} */}
