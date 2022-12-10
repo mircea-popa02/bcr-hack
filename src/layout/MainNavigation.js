@@ -52,7 +52,7 @@ const MainNavigation = () => {
                   activeClassName={classes.active}
                   onClick={closeMobileMenu}
                 >
-                  Auth
+                  Autentificare
                 </NavLink>
               </li>
             )}
