@@ -17,6 +17,7 @@ import {
   getMetadata,
 } from "firebase/storage";
 import FormPage from "./pages/FormPage";
+import Confirmation from "./pages/Confirmation";
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -222,6 +223,10 @@ function App() {
         </Route>
         <Route path="/list/:avatarId">
           {<DetailsPage pets={pets} banks={banks} />}
+          {/* {!authCtx.isLoggedIn && <Redirect to="/auth" />} */}
+        </Route>
+        <Route path="/confirmation">
+          {<Confirmation />}
           {/* {!authCtx.isLoggedIn && <Redirect to="/auth" />} */}
         </Route>
         <Route path="*">
