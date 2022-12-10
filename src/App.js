@@ -20,6 +20,7 @@ import {
 function App() {
   const authCtx = useContext(AuthContext);
   const [pets, setPets] = useState([]);
+  const [banks, setBanks] = useState([]);
   const [imageUpload, setImageUpload] = useState(null);
   const [imageUrls, setImageUrls] = useState([]);
 
@@ -85,6 +86,38 @@ function App() {
     fetchPets();
   }, []);
 
+  useEffect(() => {
+    const fetchBanks = async () => {
+      const response = await fetch(
+        "https://bcr-hack-c264b-default-rtdb.europe-west1.firebasedatabase.app/banks.json"
+      );
+      if (!response) {
+        throw new Error("Something went wrong!");
+      }
+      const responseData = await response.json();
+
+      const loadedBanks = [];
+
+      for (const key in responseData) {
+        loadedBanks.push({
+          key: key,
+          id: key,
+          name: responseData[key].name,
+          code: responseData[key].code,
+          address: responseData[key].address,
+          city: responseData[key].city,
+          county: responseData[key].county,
+          euro: responseData[key].euro,
+          contactless: responseData[key].contactless,
+        });
+      }
+      setBanks(loadedBanks);
+    };
+    fetchBanks();
+  }, []);
+
+  console.log(banks[0]);
+
   return (
     <Layout>
       <Switch>
@@ -95,11 +128,13 @@ function App() {
           <AuthPage />
         </Route>
         <Route path="/list" exact>
-          {authCtx.isLoggedIn && <ListPage pets={pets} setPets={setPets} />}
+          {authCtx.isLoggedIn && (
+            <ListPage pets={pets} banks={banks} setPets={setPets} />
+          )}
           {!authCtx.isLoggedIn && <Redirect to="/auth" />}
         </Route>
         <Route path="/list/:avatarId">
-          {authCtx.isLoggedIn && <DetailsPage pets={pets} />}
+          {authCtx.isLoggedIn && <DetailsPage pets={pets} banks={banks} />}
           {!authCtx.isLoggedIn && <Redirect to="/auth" />}
         </Route>
         <Route path="*">

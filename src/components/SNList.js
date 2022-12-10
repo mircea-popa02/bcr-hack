@@ -86,16 +86,27 @@ const SNList = (props) => {
   const [searchInput, setSearchInput] = useState("");
   const [filteredArray, setFilteredArray] = useState([]);
 
+  // useEffect(() => {
+  //   setFilteredArray(
+  //     dummyBanks.filter(
+  //       (item) =>
+  //         item.address.toLowerCase().includes(searchInput.toLowerCase()) ||
+  //         item.city.toLowerCase().includes(searchInput.toLowerCase()) ||
+  //         item.county.toLowerCase().includes(searchInput.toLowerCase())
+  //     )
+  //   );
+  // }, [searchInput]);
+
   useEffect(() => {
     setFilteredArray(
-      dummyBanks.filter(
+      props.banks.filter(
         (item) =>
           item.address.toLowerCase().includes(searchInput.toLowerCase()) ||
           item.city.toLowerCase().includes(searchInput.toLowerCase()) ||
           item.county.toLowerCase().includes(searchInput.toLowerCase())
       )
     );
-  }, [searchInput]);
+  }, [searchInput, props.banks]);
 
   const changeInputHandler = (event) => {
     setSearchInput(event.target.value);

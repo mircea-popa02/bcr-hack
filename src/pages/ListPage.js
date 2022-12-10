@@ -9,7 +9,7 @@ const ListPage = (props) => {
       {/* primul card */}
       <h1>Cauta alta locatie in care doresti sa ne vizitezi</h1>
       {/* filtru */}
-      <SNList pets={props.pets} setPets={props.setPets} />
+      <SNList pets={props.pets} banks={props.banks} setPets={props.setPets} />
     </div>
   );
 };
