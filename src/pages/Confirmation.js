@@ -32,7 +32,7 @@ const Confirmation = () => {
 
   return (
     <>
-      {voice.split(" ").length < 20 ? (
+      {!voice ? (
         <>
           <div className={classes.confirmation}>
             <h1>

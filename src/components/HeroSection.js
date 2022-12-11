@@ -17,6 +17,7 @@ const HeroSection = (props) => {
   // console.log(props.loc)
   // const [name, setName] = useState("Cristian");
   const [location, setLocation] = useState("Bucuresti");
+  const [dark, setDark] = useState(false);
 
   const [myLoc, setMyLoc] = useState("");
   const [x, setX] = useState(0);
@@ -54,22 +55,21 @@ const HeroSection = (props) => {
   window.localStorage.setItem("location", "SSplaiul Independenței 313B, București, Romaniaa")
 
   return (
-    <div className={classes["section-hero"]}>
-      <div className={classes.hero}>
-        <div className={classes["hero-text-box"]}>
-        <Link to={`/speech`} className={classes["mic"]}>
+    <div className={dark ? classes["section-hero-dark"] : classes["section-hero"]}>
+      <div className={dark ? classes["hero-dark"] : classes.hero}>
+        <div className={dark ? classes["hero-text-box-dark"] : classes["hero-text-box"]}>
+        <Link to={`/speech`} className={dark ? classes["mic-dark"] : classes["mic"]}>
             <ion-icon name="mic-outline"></ion-icon>
           </Link>
-          <div className={classes["small-container"]}>
+          <div className={dark ? classes["small-container-dark"] : classes["small-container"]}>
           
-            <h1 className={classes["heading-primary"]}>
+            <h1 className={dark ? classes["heading-primary-dark"] : classes["heading-primary"]}>
               Cu ce te putem ajuta astăzi?
             </h1>
-            
           </div>
 
-          <div className={classes["addr-landing"]}>
-            <svg
+          <div className={dark ? classes["addr-landing-dark"] : classes["addr-landing"]}>
+            <svg onClick={() => setDark(!dark)}
               width="14"
               height="17"
               viewBox="0 0 14 17"
@@ -92,86 +92,86 @@ const HeroSection = (props) => {
             {ceva.substring(1, ceva.length - 1)}
           </div>
 
-          <div className={classes["cards-container"]}>
-            <div className={classes["scrolling-wrapper-flexbox"]}>
-              <div className={classes["card-bcr"]}>
+          <div className={dark ? classes["cards-container-dark"] : classes["cards-container"]}>
+            <div className={dark ? classes["scrolling-wrapper-flexbox-dark"] : classes["scrolling-wrapper-flexbox"]}>
+              <div className={dark ? classes["card-bcr-dark"] : classes["card-bcr"]}>
                 <h2>Depunere sau retragere de bani</h2>
                 <p>
                   Atentie! Pentru retragerile de numerar de peste 3,000 de euro,
                   te invitam sa ne contactezi telefonic la *2227 (apeluri
                   nationale) sau +4021 407 4200 (apeluri internationale).
                 </p>
-                <Link to={`/list`} className={classes["btn--news"]}>
+                <Link to={`/list`} className={dark ? classes["btn--news-dark"] : classes["btn--news"]}>
                   <div>Continua</div>
                 </Link>
               </div>
-              <div className={classes["card-bcr"]}>
+              <div className={dark ? classes["card-bcr-dark"] : classes["card-bcr"]}>
                 <h2>Plata rata credit</h2>
                 <p>Plata ratelor pentru toate tipurile de credit</p>
-                <Link to={`/list`} className={classes["btn--news"]}>
+                <Link to={`/list`} className={dark ? classes["btn--news-dark"] : classes["btn--news"]}>
                   <div>Continua</div>
                 </Link>
               </div>
-              <div className={classes["card-bcr"]}>
+              <div className={dark ? classes["card-bcr-dark"] : classes["card-bcr"]}>
                 <h2>Operatiune fara numerar</h2>
                 <p>
                   Cont curent, card de debit, tranzactii, George si servicii
                   digitale, administrare cont si card.
                 </p>
-                <Link to={`/list`} className={classes["btn--news"]}>
+                <Link to={`/list`} className={dark ? classes["btn--news-dark"] : classes["btn--news"]}>
                   <div>Continua</div>
                 </Link>
               </div>
-              <div className={classes["card-bcr"]}>
+              <div className={dark ? classes["card-bcr-dark"] : classes["card-bcr"]}>
                 <h2>Deschidere cont curent</h2>
                 <p>Deschidere cont curent</p>
-                <Link to={`/list`} className={classes["btn--news"]}>
+                <Link to={`/list`} className={dark ? classes["btn--news-dark"] : classes["btn--news"]}>
                   <div>Continua</div>
                 </Link>
               </div>
-              <div className={classes["card-bcr"]}>
+              <div className={dark ? classes["card-bcr-dark"] : classes["card-bcr"]}>
                 <h2>Deschidere cont minori</h2>
                 <p>Deschidere cont persoane sub 18 ani.</p>
-                <Link to={`/list`} className={classes["btn--news"]}>
+                <Link to={`/list`} className={dark ? classes["btn--news-dark"] : classes["btn--news"]}>
                   <div>Continua</div>
                 </Link>
               </div>
-              <div className={classes["card-bcr"]}>
+              <div className={dark ? classes["card-bcr-dark"] : classes["card-bcr"]}>
                 <h2>Credit de nevoi personale</h2>
                 <p>Inclusiv card credit si descoperit de cont.</p>
-                <Link to={`/list`} className={classes["btn--news"]}>
+                <Link to={`/list`} className={dark ? classes["btn--news-dark"] : classes["btn--news"]}>
                   <div>Continua</div>
                 </Link>
               </div>
-              <div className={classes["card-bcr"]}>
+              <div className={dark ? classes["card-bcr-dark"] : classes["card-bcr"]}>
                 <h2>Investitii - subscriere</h2>
                 <p>
                   Fonduri mutuale, Capital Plan, Titluri de stat, Obligatiuni
                   structurate, Aur (lingouri si monede) etc.
                 </p>
-                <Link to={`/list`} className={classes["btn--news"]}>
+                <Link to={`/list`} className={dark ? classes["btn--news-dark"] : classes["btn--news"]}>
                   <div>Continua</div>
                 </Link>
               </div>
-              <div className={classes["card-bcr"]}>
+              <div className={dark ? classes["card-bcr-dark"] : classes["card-bcr"]}>
                 <h2>Asigurare</h2>
                 <p>Viata, casa, bunuri.</p>
-                <Link to={`/list`} className={classes["btn--news"]}>
+                <Link to={`/list`} className={dark ? classes["btn--news-dark"] : classes["btn--news"]}>
                   <div>Continua</div>
                 </Link>
               </div>
-              <div className={classes["card-bcr"]}>
+              <div className={dark ? classes["card-bcr-dark"] : classes["card-bcr"]}>
                 <h2>Pensie privata</h2>
                 <p>Pilon 3 de la BCR Pensii.</p>
-                <Link to={`/list`} className={classes["btn--news"]}>
+                <Link to={`/list`} className={dark ? classes["btn--news-dark"] : classes["btn--news"]}>
                   <div>Continua</div>
                 </Link>
               </div>
             </div>
           </div>
 
-          <div className={classes["footer"]}>
-            <div className={classes["instagram"]}>
+          <div className={dark ? classes["footer-dark"] : classes["footer"]}>
+            <div className={dark ? classes["instagram-dark"] : classes ["instagram"]}>
               Instagram
               <svg
                 width="24"
@@ -203,7 +203,7 @@ const HeroSection = (props) => {
                 />
               </svg>
             </div>
-            <div className={classes["facebook"]}>
+            <div className={dark ? classes["facebook-dark"] : classes["facebook"]}>
               Facebook
               <svg
                 width="24"
@@ -228,7 +228,7 @@ const HeroSection = (props) => {
                 />
               </svg>
             </div>
-            <div className={classes["youtube"]}>
+            <div className={dark ? classes["youtube-dark"] : classes["youtube"]}>
               YouTube
               <svg
                 width="24"

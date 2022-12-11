@@ -59,7 +59,7 @@ function SpeechToText(props) {
       <div className="container">
         <div className="box">
           <h2>Current Note</h2>
-          {isListening ? <span>🎙️</span> : <span>🛑🎙️</span>}
+          {isListening ? <span></span> : <span></span>}
           <button onClick={handleSaveNote} disabled={!note}>
             Save Note
           </button>

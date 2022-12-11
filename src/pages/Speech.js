@@ -3,6 +3,7 @@ import React, { useState } from "react";
 // import { Container, Segment } from "semantic-ui-react";
 import { useSpeechSynthesis } from "react-speech-kit";
 import { Link } from "react-router-dom";
+import classes from "./Speech.module.css";
 
 function Speech() {
   const [voice, setVoice] = useState("");
@@ -22,16 +23,16 @@ function Speech() {
   }
 
   return (
-    <>
+  <div className={classes.wrapper}>
       <h1>Text to Speech Converter in React</h1>
       <textarea
-        className="textAreaStyle"
+        className={classes.altceva}
         onChange={(e) => {
           setText(e.target.value);
         }}
       ></textarea>
       <button
-        className="buttonStyle"
+        className={classes.ceva}
         onClick={() => {
           handleOnClick();
         }}
@@ -45,10 +46,10 @@ function Speech() {
       <p>{voice.split(" ")[17]}</p>
       <p>{voice.split(" ")[18]}</p>
       <p>{voice.split(" ")[19]}</p>
-      <Link to={`/confirmation`}>
-        <span>Confirma</span>
+      <Link className={classes.button} to={`/confirmation`}>
+        <span >Confirma</span>
       </Link>
-    </>
+    </div>
   );
 }
 
