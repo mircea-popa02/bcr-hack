@@ -97,8 +97,9 @@ const BigNews = (props) => {
         <div className={classes["big-news-header"]}>
           <div className={classes.firstgroup}>
             <div className={classes["big-news-text"]}>
-              <p>Distanță: {distance.toFixed(2)}Km</p>
-              <p>{props.bank.city},</p>
+              <p> {distance.toFixed(0) !== '0' ? `Distanță: ${distance.toFixed(0)}Km` : `${''}` }</p>
+              
+              <p>{props.bank.city}</p>
               <p>{props.bank.address}</p>
             </div>
           </div>

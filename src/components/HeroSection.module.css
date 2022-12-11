@@ -23,7 +23,7 @@
 
 .addr-landing {
   display: flex;
-  margin-left: 3vw;
+  margin-left: 6vw;
   width: 100vw;
   height: 5vh;
   margin-bottom: 1vh;
@@ -80,7 +80,7 @@
   display: flex;
   flex: 0 0 auto;
   background-color: white;
-  margin-left: 3vw;
+  margin-left: 6vw;
   width: 276px;
   height: 40vh;
   background: #ffffff;
@@ -150,9 +150,8 @@
   margin-bottom: 3vh;
   font-size: 6rem;
   font-family: "Work Sans", sans-serif;
-  /* font-weight: 200; */
-  padding: 3vw;
-  padding-right: 6vw;
+  padding-top: 3vh;
+  margin-left: 6vw;
   font-family: "Work Sans";
   /* font-style: light; */
   font-weight: 200;
@@ -264,7 +263,7 @@
   height: 30vh;
   /* background-color: #E8E7ED; */
   
-  margin-top: 2vh;
+  margin-top: 3vh;
 }
 
 .footer svg {

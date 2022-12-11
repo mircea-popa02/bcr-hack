@@ -8,7 +8,10 @@
   width: 90vw;
   flex-direction: column;
   padding: 5vw;
-  align-items: flex-start
+  align-items: flex-start;
+  background-color: white;
+  padding-bottom: 3vh;
+  margin-bottom: 5vh;
 }
 
 .big-news-container svg {
@@ -19,7 +22,7 @@
 
 .wrapper {
   background-color: white;
-  height: 100vh;
+  padding-bottom: 3vh;
 }
 
 .wrapper h1 {

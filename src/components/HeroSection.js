@@ -51,6 +51,8 @@ const HeroSection = (props) => {
   if (myLoc !== "")
     window.localStorage.setItem("location", JSON.stringify(myLoc));
 
+  window.localStorage.setItem("location", "SSplaiul Independenței 313B, București, Romaniaa")
+
   return (
     <div className={classes["section-hero"]}>
       <div className={classes.hero}>
