@@ -49,11 +49,12 @@
 }
 
 .big-news-header {
-  color: #ccc;
+  color: #A2A0AC;
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* grid-gap: 2rem; */
   align-items: center;
+  margin-bottom: 2vh;
 }
 
 .firstgroup {
