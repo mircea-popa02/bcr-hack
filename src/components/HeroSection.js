@@ -82,9 +82,6 @@ const HeroSection = (props) => {
             {ceva.substring(1, ceva.length - 1)}
           </div>
 
-          {/* <Link to="/auth" className={classes["btn--full"]}>
-            Get Started...
-          </Link> */}
           <div className={classes["cards-container"]}>
             <div className={classes["scrolling-wrapper-flexbox"]}>
               <div className={classes["card-bcr"]}>

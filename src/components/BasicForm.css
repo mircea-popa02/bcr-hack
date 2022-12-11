@@ -18,14 +18,14 @@
   padding: 0.5rem;
   border-radius: 4px;
   border: 1px solid #ccc;
-  width: 20rem;
-  max-width: 100%;
+  width: 80vw;
+  max-width: 80vw;
 }
 
 .form-control input:focus {
   outline: none;
-  border-color: #240370;
-  background-color: #e0d4fd;
+  border-color: #21416C;
+  background-color: #BEE5FA;
 }
 
 .inputs-and-button {
@@ -53,13 +53,75 @@
 }
 
 .svgeu {
-  width: 80%;
+  display: block;
+  width: 50vw;
+  height: 30vh;
+  margin: auto;
+  /* filter: grayscale(100%); */
+  filter: invert(25%) sepia(100%) saturate(175%) hue-rotate(183deg) brightness(80%) contrast(150%);
+}
+
+.form-wrapper {
+  background-color: #fff;
 }
 
 #me {
   animation: me 1s ease alternate infinite;
   transform-origin: bottom;
 }
+
+.nameClasses {
+  color: #ffffff;
+}
+
+.form-control {
+  font-size: 1.5rem;
+  color: #21416C;
+}
+
+.footer {
+  display: flex;
+  margin-top: 5vh;
+  height: 10vh;
+  justify-content: space-around;
+}
+
+.instagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vw;
+  color: #21416c;
+}
+
+.facebook {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vw;
+  color: #21416c;
+}
+
+.youtube {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vw;
+  color: #21416c;
+}
+
+.facebook svg {
+  margin-top: 1vh;
+}
+
+.instagram svg {
+  margin-top: 1vh;
+}
+
+.youtube svg {
+  margin-top: 1vh;
+}
+
 
 @keyframes me {
   from {
@@ -107,19 +169,31 @@
 }
 
 .form-btn {
-  background-color: #f3ec78;
-  background-image: linear-gradient(45deg, #ffe998, #57370d);
-  color: #000;
-  height: 4rem;
-  border-radius: 0.2rem;
+  background-color: #21416c;
+  border-radius: 8px;
+  color: #fff;
+  padding: 4vw;
   text-align: center;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.form-actions {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  width: 80vw;
+  justify-content: space-evenly;
+}
+
+.form-actions button {
+  background-color: #ED1C24;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  color: #fff;
+  padding: 4vw;
+  text-align: center;
   transition: all 0.2s;
   border: none;
   cursor: pointer;

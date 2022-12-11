@@ -96,28 +96,13 @@ const BigNews = (props) => {
         <h2 className={classes.animalName}>{props.bank.name}</h2>
         <div className={classes["big-news-header"]}>
           <div className={classes.firstgroup}>
-            {/* <img
-              className={classes["big-image"]}
-              src={deliverPhoto(props.pet.species)}
-              alt="Big News"
-            /> */}
             <div className={classes["big-news-text"]}>
-              <h2>Race: {props.bank.city}</h2>
-              <h2>{distance}</h2>
-              <h2>Size: {props.bank.address}</h2>
+              <p>Distanță: {distance.toFixed(2)}Km</p>
+              <p>{props.bank.city},</p>
+              <p>{props.bank.address}</p>
             </div>
           </div>
-          {/* <div className={classes.reward}>
-            <h1> Reward </h1>
-            <h1> 1000$ </h1>
-          </div> */}
         </div>
-        {/* <div className={classes["big-news-content"]}>
-          <h2>Owner: {props.pet.ownersName}</h2>
-          <h2>Phone: {props.pet.ownersPhone}</h2>
-          <h2>Pet went missing on: {props.pet.date}</h2>
-          <h2>Last seen around:</h2>
-        </div> */}
         <div className={classes["big-news-map"]}>
           {lat !== 0 ? <MyMap latitude={lat} longitude={lng} /> : null}
         </div>

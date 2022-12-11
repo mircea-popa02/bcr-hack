@@ -107,4 +107,10 @@
   cursor: pointer;
   text-decoration: none;
   display: block;
+  margin-top: 2vh;
+}
+
+.big-news-text p {
+  font-size: 2rem;
+  margin-bottom: 1vh;
 }
