@@ -1,12 +1,13 @@
 import useInput from "../hooks/use-input";
 import "./BasicForm.css";
+import { Link } from "react-router-dom";
 
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.includes("@");
 const isCNP = (value) => value.length === 13;
 
 const BasicForm = (props) => {
-  let myTasks = JSON.parse(localStorage.getItem("myTaskList")) || [];
+  // let myTasks = JSON.parse(localStorage.getItem("myTaskList")) || {};
   // props.pets and props.onPetChange
 
   const {
@@ -104,8 +105,8 @@ const BasicForm = (props) => {
       ownersPhone: phoneValue,
       ownersEmail: emailValue,
     };
-    myTasks.push(newPet);
-    localStorage.setItem("myTaskList", JSON.stringify(myTasks));
+    // myTasks.push(newPet);
+    localStorage.setItem("myTaskList", JSON.stringify(newPet));
     props.onPetChange((prevPets) => {
       return prevPets.concat(newPet);
     });
@@ -134,10 +135,9 @@ const BasicForm = (props) => {
   const emailClasses = emailHasError ? "form-control invalid" : "form-control";
 
   return (
-
-    <form onSubmit={submitHandler} >
+    <form onSubmit={submitHandler}>
       <svg
-      class="svgeu"
+        class="svgeu"
         width="799"
         height="690"
         viewBox="0 0 799 690"
@@ -304,11 +304,7 @@ const BasicForm = (props) => {
             d="M111.41 38.9748C127.344 38.9748 140.261 34.4 140.261 28.7567C140.261 23.1134 127.344 18.5386 111.41 18.5386C95.4757 18.5386 82.5586 23.1134 82.5586 28.7567C82.5586 34.4 95.4757 38.9748 111.41 38.9748Z"
             fill="#3F3D56"
           />
-          <path
-            id="clock-arrow"
-            d="M115 86H108V135H115V86Z"
-            fill="#3F3D56"
-          />
+          <path id="clock-arrow" d="M115 86H108V135H115V86Z" fill="#3F3D56" />
           <path
             id="Vector_32"
             d="M226 220.44H0V222.844H226V220.44Z"
@@ -425,9 +421,13 @@ const BasicForm = (props) => {
           </div>
         </div>
         <div className="form-actions">
-          <button className="form-btn" disabled={!formIsValid}>
+          <Link
+            className="form-btn"
+            disabled={!formIsValid}
+            to={`/confirmation`}
+          >
             Submit
-          </button>
+          </Link>
         </div>
       </div>
     </form>

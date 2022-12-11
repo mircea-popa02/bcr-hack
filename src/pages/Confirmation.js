@@ -5,11 +5,19 @@ const Confirmation = () => {
   const [userInfo, setUserInfo] = useState({});
 
   useEffect(() => {
-    const items = JSON.parse(localStorage.getItem("myTaskList"));
+    const items = localStorage.getItem("myTaskList");
     setUserInfo(items);
   }, []);
-  console.log(userInfo[0].ownersEmail);
-  //   let response = JSON.parse(userInfo);
+
+  if (typeof userInfo === "object" && !Array.isArray(userInfo)) {
+    console.log("team prins");
+  } else {
+    console.log(JSON.parse(userInfo)["0"].name);
+  }
+
+  console.log(userInfo);
+  //   console.log(userInfo[0].ownersEmail);
+  //   let response = JSON.parse(userInfo["0"]);
   //   console.log(response.name);
 
   return (
@@ -17,8 +25,12 @@ const Confirmation = () => {
       <h1>Thank you for signing up!</h1>
       <p>
         You will receive an email shortly at{" "}
-        <strong>{userInfo[0].ownersEmail}</strong> with a link to confirm your
-        email address.
+        <strong>
+          {!(typeof userInfo === "object" && !Array.isArray(userInfo))
+            ? JSON.parse(userInfo)["0"].ownersEmail
+            : null}
+        </strong>{" "}
+        with a link to confirm your email address.
       </p>
     </div>
   );
