@@ -1,16 +1,18 @@
 import useInput from "../hooks/use-input";
 import "./BasicForm.css";
 import { Link} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.includes("@");
 const isCNP = (value) => value.length === 13;
 
+
 const BasicForm = (props) => {
   // const navigate = Routes.
   // let myTasks = JSON.parse(localStorage.getItem("myTaskList")) || {};
   // props.pets and props.onPetChange
-  
+  let history = useHistory();
 
   const {
     value: dateValue,
@@ -124,7 +126,7 @@ const BasicForm = (props) => {
     resetCnp();
     resetPhone();
     resetEmail();
-
+    history.push('/confirmation')
     // history.push('/confirmation')
   };
 
@@ -427,14 +429,14 @@ const BasicForm = (props) => {
           </div>
         </div>
         <div className="form-actions">
-          <button className="form-btn" onClick={submitHandler}>Remite</button>
-          <Link
+          <button className="form-btn" onClick={submitHandler}>Finalizează</button>
+          {/* <Link
             className="form-btn"
             disabled={!formIsValid}
             to={`/confirmation`}
           >
             Finalizează
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div className="footer">
