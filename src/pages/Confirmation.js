@@ -28,9 +28,9 @@ const Confirmation = () => {
       <p>
         You will receive an email shortly at{" "}
         <strong>
-          {/* {!(typeof userInfo === "object" && !Array.isArray(userInfo))
-            ? JSON.parse(userInfo)["0"].ownersEmail
-            : null} */}
+          {!(typeof userInfo === "object" && !Array.isArray(userInfo))
+            ? JSON.parse(userInfo).ownersEmail
+            : null}
         </strong>{" "}
         with a link to confirm your email address.
       </p>
