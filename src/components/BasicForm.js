@@ -1,7 +1,6 @@
 import useInput from "../hooks/use-input";
 import "./BasicForm.css";
-import { Link, Routes, useNavigate, Route } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.includes("@");
@@ -433,7 +432,6 @@ const BasicForm = (props) => {
             className="form-btn"
             disabled={!formIsValid}
             to={`/confirmation`}
-
           >
             Finalizează
           </Link>
