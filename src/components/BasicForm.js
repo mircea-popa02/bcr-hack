@@ -111,7 +111,7 @@ const BasicForm = (props) => {
       return prevPets.concat(newPet);
     });
 
-    submitPetHandler();
+    // submitPetHandler();
 
     // console.log("Submitted!");
     // console.log(nameValue, speciesValue, dateValue);
@@ -135,7 +135,7 @@ const BasicForm = (props) => {
   const emailClasses = emailHasError ? "form-control invalid" : "form-control";
 
   return (
-    <form onSubmit={submitHandler}>
+    <form>
       <svg
         class="svgeu"
         width="799"
@@ -421,6 +421,7 @@ const BasicForm = (props) => {
           </div>
         </div>
         <div className="form-actions">
+          <button onClick={submitHandler}>Submit</button>
           <Link
             className="form-btn"
             disabled={!formIsValid}
