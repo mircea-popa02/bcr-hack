@@ -57,6 +57,9 @@ const HeroSection = (props) => {
         <div className={classes["hero-text-box"]}>
           <h1 className={classes["heading-primary"]}>
             Cu ce te putem ajuta astăzi?
+            <Link to={`/speech`} className={classes["btn--news2"]}>
+              <ion-icon name="mic-outline"></ion-icon>
+            </Link>
           </h1>
           <div className={classes["addr-landing"]}>
             <svg
@@ -213,7 +216,8 @@ const HeroSection = (props) => {
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
-              </svg></div>
+              </svg>
+            </div>
             <div className={classes["youtube"]}>
               YouTube
               <svg

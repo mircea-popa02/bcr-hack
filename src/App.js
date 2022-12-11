@@ -9,6 +9,7 @@ import AuthContext from "./store/auth-context";
 import { useContext, useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import { storage } from "./store/firebase";
+import Speech from "./pages/Speech";
 
 import {
   ref,
@@ -21,7 +22,6 @@ import FormPage from "./pages/FormPage";
 import Confirmation from "./pages/Confirmation";
 
 function App() {
-  
   const authCtx = useContext(AuthContext);
   const [pets, setPets] = useState([]);
   const [banks, setBanks] = useState([]);
@@ -124,93 +124,90 @@ function App() {
 
   // cconsole.log(banks[0]);
 
-  
-    // setTimeout(() => {
-    //   navigator.geolocation.getCurrentPosition((position) => {
-    //     console.log("Latitude is :", position.coords.latitude);
-    //     console.log("Longitude is :", position.coords.longitude);
-    //   });
-    // }, 5000);
+  // setTimeout(() => {
+  //   navigator.geolocation.getCurrentPosition((position) => {
+  //     console.log("Latitude is :", position.coords.latitude);
+  //     console.log("Longitude is :", position.coords.longitude);
+  //   });
+  // }, 5000);
 
-    // Geocode.setApiKey("AIzaSyDtMSRiyaavuMQA_DFwYglfSGCDKSd6zbc");
-    // Geocode.setLocationType("ROOFTOP");
-    // if (navigator.geolocation) {
-    //   // alert("available!");
-    //   navigator.geolocation.getCurrentPosition(function (position, error) {
-    //     console.log(position);
-    //     setLat(position.coords.latitude);
-    //     setLng(position.coords.longitude);
-    //     console.log(error);
-    //   });
-    //   // navigator.geolocation.getCurrentPosition(function (position) {
-    //   //   alert(position.coords.latitude);
-    //   // });
-    // } else {
-    //   alert("Sorry Not available!");
-    // }
+  // Geocode.setApiKey("AIzaSyDtMSRiyaavuMQA_DFwYglfSGCDKSd6zbc");
+  // Geocode.setLocationType("ROOFTOP");
+  // if (navigator.geolocation) {
+  //   // alert("available!");
+  //   navigator.geolocation.getCurrentPosition(function (position, error) {
+  //     console.log(position);
+  //     setLat(position.coords.latitude);
+  //     setLng(position.coords.longitude);
+  //     console.log(error);
+  //   });
+  //   // navigator.geolocation.getCurrentPosition(function (position) {
+  //   //   alert(position.coords.latitude);
+  //   // });
+  // } else {
+  //   alert("Sorry Not available!");
+  // }
 
-    // function displayLocation(latitude, longitude) {
-    //   var request = new XMLHttpRequest();
+  // function displayLocation(latitude, longitude) {
+  //   var request = new XMLHttpRequest();
 
-    //   var method = "GET";
-    //   var url =
-    //     "http://maps.googleapis.com/maps/api/geocode/json?latlng=" +
-    //     latitude +
-    //     "," +
-    //     longitude +
-    //     "&sensor=true";
-    //   var async = true;
+  //   var method = "GET";
+  //   var url =
+  //     "http://maps.googleapis.com/maps/api/geocode/json?latlng=" +
+  //     latitude +
+  //     "," +
+  //     longitude +
+  //     "&sensor=true";
+  //   var async = true;
 
-    //   request.open(method, url, async);
-    //   request.onreadystatechange = function () {
-    //     if (request.readyState == 4 && request.status == 200) {
-    //       var data = JSON.parse(request.responseText);
-    //       var address = data.results[0];
-    //       document.write(address.formatted_address);
-    //     }
-    //   };
-    //   request.send();
-    // }
+  //   request.open(method, url, async);
+  //   request.onreadystatechange = function () {
+  //     if (request.readyState == 4 && request.status == 200) {
+  //       var data = JSON.parse(request.responseText);
+  //       var address = data.results[0];
+  //       document.write(address.formatted_address);
+  //     }
+  //   };
+  //   request.send();
+  // }
 
-    // var successCallback = function (position) {
-    //   var x = position.coords.latitude;
-    //   var y = position.coords.longitude;
-    //   displayLocation(x, y);
-    // };
+  // var successCallback = function (position) {
+  //   var x = position.coords.latitude;
+  //   var y = position.coords.longitude;
+  //   displayLocation(x, y);
+  // };
 
-    // var errorCallback = function (error) {
-    //   var errorMessage = "Unknown error";
-    //   switch (error.code) {
-    //     case 1:
-    //       errorMessage = "Permission denied";
-    //       break;
-    //     case 2:
-    //       errorMessage = "Position unavailable";
-    //       break;
-    //     case 3:
-    //       errorMessage = "Timeout";
-    //       break;
-    //     default:
-    //       break;
-    //   }
-    //   document.write(errorMessage);
-    // };
+  // var errorCallback = function (error) {
+  //   var errorMessage = "Unknown error";
+  //   switch (error.code) {
+  //     case 1:
+  //       errorMessage = "Permission denied";
+  //       break;
+  //     case 2:
+  //       errorMessage = "Position unavailable";
+  //       break;
+  //     case 3:
+  //       errorMessage = "Timeout";
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  //   document.write(errorMessage);
+  // };
 
-    // var options = {
-    //   enableHighAccuracy: true,
-    //   timeout: 1000,
-    //   maximumAge: 0,
-    // };
+  // var options = {
+  //   enableHighAccuracy: true,
+  //   timeout: 1000,
+  //   maximumAge: 0,
+  // };
 
-    // navigator.geolocation.getCurrentPosition(
-    //   successCallback,
-    //   errorCallback,
-    //   options
-    // );
+  // navigator.geolocation.getCurrentPosition(
+  //   successCallback,
+  //   errorCallback,
+  //   options
+  // );
 
-    // console.log(banks.length)
-
-    
+  // console.log(banks.length)
 
   return (
     <Layout>
@@ -235,6 +232,10 @@ function App() {
         </Route>
         <Route path="/confirmation">
           {<Confirmation />}
+          {/* {!authCtx.isLoggedIn && <Redirect to="/auth" />} */}
+        </Route>
+        <Route path="/speech">
+          {<Speech />}
           {/* {!authCtx.isLoggedIn && <Redirect to="/auth" />} */}
         </Route>
         <Route path="*">
