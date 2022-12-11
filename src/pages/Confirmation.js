@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import MyMap from "../components/GoogleMap";
 import SendEmail from "../components/SendEmail";
+import classes from "../pages/Confirmation.module.css"
 
 const Confirmation = () => {
   const [userInfo, setUserInfo] = useState({});
@@ -14,8 +15,6 @@ const Confirmation = () => {
     setBank(bank);
   }, []);
 
-  //   console.log(userInfo);
-
   if (typeof userInfo === "object" && !Array.isArray(userInfo)) {
     console.log("team prins");
   } else {
@@ -27,17 +26,13 @@ const Confirmation = () => {
   } else {
     console.log(JSON.parse(bankInfo).name);
   }
-  // window.location.reload(false);
 
-  // console.log(JSON.parse(bankInfo))
-  //   console.log(userInfo);
-  //   console.log(userInfo[0].ownersEmail);
-  //   let response = JSON.parse(userInfo["0"]);
-  //   console.log(response.name);
   return (
     <>
-      <div className="confirmation">
-        <h1>Salut, Cristian</h1>
+      <div className={classes.confirmation}>
+        <h1>Salut, {!(typeof userInfo === "object" && !Array.isArray(userInfo))
+          ? JSON.parse(userInfo).name
+          : null}</h1>
         <p>
           {" "}
           Programarea ta la{" "}
@@ -46,31 +41,32 @@ const Confirmation = () => {
               ? JSON.parse(bankInfo).name
               : null}
           </strong>{" "}
-          este confirmata.
+          este confirmată.
         </p>
 
-        <p>scopul vizitei: depunere sau retragere de bani</p>
+        <p>Scopul vizitei: depunere sau retragere de bani.</p>
         <p>
-          locatie:{" "}
+          Locația BCR aleasă:{" "}
           <strong>
             {!(typeof bankInfo === "object" && !Array.isArray(bankInfo))
               ? JSON.parse(bankInfo).address
               : null}
           </strong>
+          <div className={classes.map}><MyMap latitude={44.442586} longitude={26.0513144} /></div>
+
         </p>
 
         <p>
-          Vei primi un e-mail automat cu detalii ce vor aparea in calendarul tau
-          la adresa{" "}
+          Vei primi un e-mail automat la adresa{" "}
           <strong>
             {!(typeof userInfo === "object" && !Array.isArray(userInfo))
               ? JSON.parse(userInfo).ownersEmail
               : null}
-          </strong>{" "}
+          </strong>{" "} cu mai multe detalii după confirmare.
         </p>
 
         <p>
-          va asteptam la data{" "}
+          Vă așteptăm pe data{" "}
           <strong>
             {!(typeof userInfo === "object" && !Array.isArray(userInfo))
               ? JSON.parse(userInfo).date
@@ -78,30 +74,32 @@ const Confirmation = () => {
           </strong>
         </p>
       </div>
-      <MyMap latitude={44.442586} longitude={26.0513144} />
 
-      <SendEmail
-        name={
-          !(typeof bankInfo === "object" && !Array.isArray(bankInfo))
-            ? JSON.parse(bankInfo).name
-            : null
-        }
-        address={
-          !(typeof bankInfo === "object" && !Array.isArray(bankInfo))
-            ? JSON.parse(bankInfo).address
-            : null
-        }
-        date={
-          !(typeof userInfo === "object" && !Array.isArray(userInfo))
-            ? JSON.parse(userInfo).date
-            : null
-        }
-        email={
-          !(typeof userInfo === "object" && !Array.isArray(userInfo))
-            ? JSON.parse(userInfo).ownersEmail
-            : null
-        }
-      />
+      <div className={classes.confirm}>
+        <SendEmail
+          name={
+            !(typeof bankInfo === "object" && !Array.isArray(bankInfo))
+              ? JSON.parse(bankInfo).name
+              : null
+          }
+          address={
+            !(typeof bankInfo === "object" && !Array.isArray(bankInfo))
+              ? JSON.parse(bankInfo).address
+              : null
+          }
+          date={
+            !(typeof userInfo === "object" && !Array.isArray(userInfo))
+              ? JSON.parse(userInfo).date
+              : null
+          }
+          email={
+            !(typeof userInfo === "object" && !Array.isArray(userInfo))
+              ? JSON.parse(userInfo).ownersEmail
+              : null
+          }
+        />
+      </div>
+
     </>
   );
 };

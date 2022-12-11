@@ -1,0 +1,29 @@
+.App {
+    /* height: 10vh; */
+    background-color: #fff;
+    
+}
+
+.header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+}
+.msj {
+    /* height: 10vh; */
+    margin: auto;
+    border: 0;
+}
+
+.sendButton {
+    margin-top: 3vh;
+    background-color: #21416C;
+    padding: 4vw;
+    border-radius: 1rem;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5rem;
+    border: 0;
+}

@@ -9,6 +9,7 @@ body {
   font-family: 'Work Sans', sans-serif;
   /* overflow-y: auto; */
   overflow: scroll;
+  background-color: white;
 }
 
 .App-logo {

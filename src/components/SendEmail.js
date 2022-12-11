@@ -1,6 +1,6 @@
 // Your imports...
 import UseEmail from "../hooks/useEmail";
-
+import classes from "../components/SendEmail.module.css";
 // Example component
 function SendEmail(props) {
   // You don't need to manage state by yourself
@@ -20,16 +20,16 @@ function SendEmail(props) {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className={classes.App}>
+      <header className={classes.header}>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <div style={{ margin: "1rem 0", fontSize: "2rem" }}>
-          {submitted && "Done, email was sent!"}
-          {error ? `Unexpected error: ${error}` : null}
-          {loading && "Email is being sent now..."}
+        <div className={classes.msj}>
+          {submitted && "Gata, e-mailul a fost trimis!"}
+          {error ? `${error}` : null}
+          {loading && "Se trimite..."}
         </div>
-        <div style={{ margin: "1rem 0" }}>
-          <button onClick={sendExample}>Send test data</button>
+        <div >
+          <button className={classes.sendButton} onClick={sendExample}>Confirmare</button>
         </div>
       </header>
     </div>
