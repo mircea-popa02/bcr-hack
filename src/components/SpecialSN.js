@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 
 const SmallNews = (props) => {
   // console.log(props.info.id);
+  const onClickHandler = () => {
+    localStorage.setItem("chosenBank", JSON.stringify(props.info));
+  };
 
   return (
     <div className={classes["special-container"]}>
@@ -25,9 +28,16 @@ const SmallNews = (props) => {
             {props.info.county}
           </p>
         </div>
-        <Link to={`/list/${props.info.name}`} className={classes["btn--news"]}>
-          <span>Detalii</span>
-        </Link>
+        <div className={classes["buttons"]}>
+          <Link to={`/list/${props.info.name}`} className={classes["btn--news"]}>
+            <span>Detalii</span>
+          </Link>
+
+          <Link to={`/form`} className={classes["btn--news2"]}>
+            <span onClick={onClickHandler}>Selectează</span>
+          </Link>
+        </div>
+
       </div>
     </div>
   );

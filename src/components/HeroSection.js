@@ -244,7 +244,6 @@ const HeroSection = (props) => {
                 />
               </svg>
             </div>
-
           </div>
         </div>
       </div>

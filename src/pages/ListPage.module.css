@@ -39,3 +39,39 @@
   height: 3rem;
 }
 
+.instagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vw;
+  color: #21416c;
+}
+
+.facebook {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vw;
+  color: #21416c;
+}
+
+.youtube {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vw;
+  color: #21416c;
+}
+
+.facebook svg {
+  margin-top: 1vh;
+}
+
+.instagram svg {
+  margin-top: 1vh;
+}
+
+.youtube svg {
+  margin-top: 1vh;
+}
+

@@ -117,7 +117,7 @@ const SNList = (props) => {
     <div className={classes["sn-list"]}>
       <SpecialSN info={dummyBanks[0]} key={dummyBanks[0].code}></SpecialSN>
       <div className={classes["text-search"]}>
-        <h1>Cauta alta locatie in care doresti sa ne vizitezi</h1>
+        <h1>Caută altă locație în care dorești să ne vizitezi</h1>
       </div>
 
       <div className={classes["search-bar-container"]}>
