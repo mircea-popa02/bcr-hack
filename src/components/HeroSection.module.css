@@ -105,6 +105,18 @@
   display: flex;
 }
 
+.btn--news-2 {
+  width: 25vw;
+  height: 5vh;
+  background: #ffffff;
+  border-radius: 6px;
+  text-decoration: none;
+  display: flex;
+}
+.mic {
+  opacity: 0;
+  z-index: 999;
+}
 .btn--news div {
   color: white;
   margin: auto;
@@ -137,6 +149,7 @@
   color: #a2a0ac;
 }
 
+
 .heading-primary {
   font-size: 4.6rem;
   margin-bottom: 4.6rem;
@@ -150,7 +163,7 @@
   margin-bottom: 3vh;
   font-size: 6rem;
   font-family: "Work Sans", sans-serif;
-  padding-top: 3vh;
+  /* padding-top: 3vh; */
   margin-left: 6vw;
   font-family: "Work Sans";
   /* font-style: light; */
@@ -271,5 +284,14 @@
   height: 3rem;
 
   color: white;
+}
+
+@media (min-width: 768px) {
+  .btn--news {
+    width: 10vw;
+    height: 5vh;
+  }
+
+  
 }
 

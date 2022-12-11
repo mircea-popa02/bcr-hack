@@ -101,6 +101,8 @@ const BigNews = (props) => {
               
               <p>{props.bank.city}</p>
               <p>{props.bank.address}</p>
+              <p>Retarageri în Euro: {props.bank.euro}</p>
+              <p>Plăți contactless: {props.bank.contactless}</p>
             </div>
           </div>
         </div>

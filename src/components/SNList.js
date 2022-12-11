@@ -59,12 +59,12 @@ const deliverPhoto = (species) => {
 
 const dummyBanks = [
   {
-    code: "ATM0001",
-    name: "BCR CARAS SEVER",
-    address: "STR.I.L.CARAGIALE NR.10",
-    city: "RESITA",
-    county: "CARAS SEVERIN",
-    euro: "DA",
+    code: "MFM895",
+    name: "BCR POLITEHNICA",
+    address: "Splaiul Independentei Nr. 113",
+    city: "BUCURESTI",
+    county: "BUCURESTI S6",
+    euro: "NU",
     contactless: "NU",
   },
   {
@@ -79,24 +79,8 @@ const dummyBanks = [
 ];
 
 const SNList = (props) => {
-  // const [showForm, setShowForm] = useState(false);
-
-  // const showFormHandler = () => {
-  //   setShowForm((prev) => !prev);
-  // };
   const [searchInput, setSearchInput] = useState("");
   const [filteredArray, setFilteredArray] = useState([]);
-
-  // useEffect(() => {
-  //   setFilteredArray(
-  //     dummyBanks.filter(
-  //       (item) =>
-  //         item.address.toLowerCase().includes(searchInput.toLowerCase()) ||
-  //         item.city.toLowerCase().includes(searchInput.toLowerCase()) ||
-  //         item.county.toLowerCase().includes(searchInput.toLowerCase())
-  //     )
-  //   );
-  // }, [searchInput]);
 
   useEffect(() => {
     setFilteredArray(
@@ -129,10 +113,6 @@ const SNList = (props) => {
           value={searchInput}
         />
 
-        {/* {filteredArray.map((name) => {
-          return <p>{name}</p>;
-        })} */}
-
         <svg
           className={classes["svg-search"]}
           width="12"
@@ -150,20 +130,6 @@ const SNList = (props) => {
       {filteredArray
         .map((bank) => <SmallNews info={bank} key={bank.code} />)
         .splice(0, 20)}
-      {/* {props.pets.map((pet) => (
-        <SmallNews info={pet} key={pet.id} photo={deliverPhoto(pet.species)} />
-      ))} */}
-
-      {/* <button onClick={showFormHandler} className={classes["show-hide"]}>
-        {!showForm ? "Lost your pet? Show form..." : "Hide form"}
-      </button> */}
-
-      {/* {showForm && <BasicForm pets={props.pets} onPetChange={props.setPets} />} */}
-
-      {/* <SmallNews />
-      <SmallNews />
-      <SmallNews />
-      <SmallNews /> */}
     </div>
   );
 };

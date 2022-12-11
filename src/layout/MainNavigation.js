@@ -44,7 +44,7 @@ const MainNavigation = () => {
                 </NavLink>
               </li>
             )}
-            {!authCtx.isLoggedIn && (
+            {/* {!authCtx.isLoggedIn && (
               <li className={classes["nav-item"]}>
                 <NavLink
                   className={classes["nav-links"]}
@@ -55,7 +55,7 @@ const MainNavigation = () => {
                   Autentificare
                 </NavLink>
               </li>
-            )}
+            )} */}
             {authCtx.isLoggedIn && (
               <li>
                 <button onClick={authCtx.onLogout} className={classes.logout}>
@@ -64,11 +64,14 @@ const MainNavigation = () => {
               </li>
             )}
           </ul>
+         
           <div className={classes["menu-icon"]} onClick={handleClick}>
+          
             <ion-icon
               className={classes.ionicon}
               name={clicked ? "close-outline" : "menu-outline"}
             ></ion-icon>
+            
           </div>
         </div>
       </div>

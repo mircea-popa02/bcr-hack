@@ -1,14 +1,17 @@
 import useInput from "../hooks/use-input";
 import "./BasicForm.css";
-import { Link } from "react-router-dom";
+import { Link, Routes, useNavigate, Route } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.includes("@");
 const isCNP = (value) => value.length === 13;
 
 const BasicForm = (props) => {
+  // const navigate = Routes.
   // let myTasks = JSON.parse(localStorage.getItem("myTaskList")) || {};
   // props.pets and props.onPetChange
+  
 
   const {
     value: dateValue,
@@ -122,6 +125,8 @@ const BasicForm = (props) => {
     resetCnp();
     resetPhone();
     resetEmail();
+
+    // history.push('/confirmation')
   };
 
   const nameClasses = nameHasError ? "form-control invalid" : "form-control";
@@ -428,6 +433,7 @@ const BasicForm = (props) => {
             className="form-btn"
             disabled={!formIsValid}
             to={`/confirmation`}
+
           >
             Finalizează
           </Link>

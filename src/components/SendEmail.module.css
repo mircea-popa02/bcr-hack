@@ -18,12 +18,20 @@
 }
 
 .sendButton {
-    margin-top: 3vh;
+    /* margin-top: 3vh; */
     background-color: #21416C;
-    padding: 4vw;
+    padding: 3vw;
     border-radius: 1rem;
     color: #fff;
     font-weight: 400;
     font-size: 1.5rem;
     border: 0;
+}
+
+@media (min-width: 768px) {
+    .sendButton {
+        padding: 1vw;
+        font-size: 2rem;
+    }
+
 }

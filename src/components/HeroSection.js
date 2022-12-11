@@ -57,12 +57,17 @@ const HeroSection = (props) => {
     <div className={classes["section-hero"]}>
       <div className={classes.hero}>
         <div className={classes["hero-text-box"]}>
-          <h1 className={classes["heading-primary"]}>
-            Cu ce te putem ajuta astăzi?
-            <Link to={`/speech`} className={classes["btn--news2"]}>
-              <ion-icon name="mic-outline"></ion-icon>
-            </Link>
-          </h1>
+        <Link to={`/speech`} className={classes["mic"]}>
+            <ion-icon name="mic-outline"></ion-icon>
+          </Link>
+          <div className={classes["small-container"]}>
+          
+            <h1 className={classes["heading-primary"]}>
+              Cu ce te putem ajuta astăzi?
+            </h1>
+            
+          </div>
+
           <div className={classes["addr-landing"]}>
             <svg
               width="14"
@@ -127,6 +132,9 @@ const HeroSection = (props) => {
               <div className={classes["card-bcr"]}>
                 <h2>Deschidere cont minori</h2>
                 <p>Deschidere cont persoane sub 18 ani.</p>
+                <Link to={`/list`} className={classes["btn--news"]}>
+                  <div>Continua</div>
+                </Link>
               </div>
               <div className={classes["card-bcr"]}>
                 <h2>Credit de nevoi personale</h2>
