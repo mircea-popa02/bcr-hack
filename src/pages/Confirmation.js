@@ -19,8 +19,15 @@ const Confirmation = () => {
     console.log(JSON.parse(userInfo).name);
   }
 
-  console.log(JSON.parse(bankInfo).name)
 
+  if (typeof bankInfo === "object" && !Array.isArray(bankInfo)) {
+    console.log("team prins2");
+  } else {
+    console.log(JSON.parse(bankInfo).name);
+  }
+  // window.location.reload(false);
+  
+  // console.log(JSON.parse(bankInfo))
   //   console.log(userInfo);
   //   console.log(userInfo[0].ownersEmail);
   //   let response = JSON.parse(userInfo["0"]);
@@ -30,13 +37,17 @@ const Confirmation = () => {
     <div className="confirmation">
       <h1>Salut, Cristian</h1>
       <p> Programarea ta la {" "}
-        <strong>{JSON.parse(bankInfo).name}</strong>{" "}
+        <strong>{!(typeof bankInfo === "object" && !Array.isArray(bankInfo))
+            ? JSON.parse(bankInfo).name
+            : null}</strong>{" "}
         este confirmata.
 
       </p>
 
       <p>scopul vizitei: depunere sau retragere de bani</p>
-      <p>locatie:{" "} <strong>{JSON.parse(bankInfo).address}{", "}{JSON.parse(bankInfo).city}</strong></p>
+      <p>locatie:{" "} <strong>{!(typeof bankInfo === "object" && !Array.isArray(bankInfo))
+            ? JSON.parse(bankInfo).address
+            : null}</strong></p>
 
       <p>
         Vei primi un e-mail automat cu detalii ce vor aparea in calendarul tau la adresa{" "}
